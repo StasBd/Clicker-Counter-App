@@ -2,11 +2,11 @@ package com.example.myapplication
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.widget.Button
 import android.widget.TextView
-import com.example.myapplication.R.id.button
-import com.example.myapplication.R.id.countertxt
+import com.example.myapplication.R.id.addCounterButton
+import com.example.myapplication.R.id.resetbutton
+import com.example.myapplication.R.id.takeawayButton
 
 
 class MainActivity : AppCompatActivity() {
@@ -30,13 +30,17 @@ class MainActivity : AppCompatActivity() {
 
 
         seeText = findViewById<TextView>(R.id.countertxt)
-        val button = findViewById<Button>(button)
-        val resetButton = findViewById<Button>(R.id.ResetButton)
-
+        val button = findViewById<Button>(addCounterButton)
+        val resetButton = findViewById<Button>(resetbutton)
+        val takebutton = findViewById<Button>(takeawayButton)
         //Click button logic
         button.setOnClickListener() {
             // when we click this button counter will add 1 number
             counter++
+            seeText.text = "Counter: $counter"
+        }
+        takebutton.setOnClickListener(){
+            counter--
             seeText.text = "Counter: $counter"
         }
 
