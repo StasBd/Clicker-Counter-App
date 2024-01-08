@@ -4,63 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#2B2E2E"
+    android:background="@color/backgroundgray"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/countertxt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#2B2E2E"
-        android:text="Counter: "
-        android:textColor="#B3B0B0"
-        android:textSize="26sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.306" />
-
-    <Button
-        android:id="@+id/addCounterButton"
-        android:layout_width="205dp"
-        android:layout_height="255dp"
-        android:background="@color/material_dynamic_neutral30"
-        android:text="+"
-        android:textColorLink="#151414"
-        android:textSize="50sp"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/BottomNavigationView"
+        android:layout_width="0dp"
+        android:layout_height="102dp"
+        android:background="#201E1E"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="1.0"
+        app:menu="@menu/bottomnavmenu" />
 
-    <Button
-        android:id="@+id/takeawayButton"
-        android:layout_width="207dp"
-        android:layout_height="255dp"
-        android:background="@color/black"
-        android:text="-"
-        android:textSize="50sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_layout"
+        android:name="com.example.myapplication.homeFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/BottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <Button
-        android:id="@+id/resetbutton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Reset"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.01" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
