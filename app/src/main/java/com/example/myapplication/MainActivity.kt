@@ -5,9 +5,6 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.Fragment
-import com.example.myapplication.R.id.addCounterButton
-import com.example.myapplication.R.id.resetbutton
-import com.example.myapplication.R.id.takeawayButton
 import com.example.myapplication.databinding.ActivityMainBinding
 
 
@@ -36,8 +33,28 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
+     // setting onClicklistener
+        binding.bottomnavigation.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+            R.id.Profile -> replaceFragments(ProfileFragment());
+
+                R.id.home -> replaceFragments(HomeFragment())
+                else -> {
+
+                }
+            }
+            true
+        }
 
 
+        }
+
+    private fun replaceFragments(fragment: Fragment) {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.frame_layout, fragment)
+            .commit()
 
     }
+
+
 }

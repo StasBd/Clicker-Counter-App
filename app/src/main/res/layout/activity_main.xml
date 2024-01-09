@@ -7,27 +7,40 @@
     android:background="@color/backgroundgray"
     tools:context=".MainActivity">
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/BottomNavigationView"
+    <LinearLayout
+        android:id="@+id/linearLayoutBottomNav"
         android:layout_width="0dp"
-        android:layout_height="102dp"
-        android:background="#201E1E"
+        android:layout_height="100dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        app:menu="@menu/bottomnavmenu" />
+        app:layout_constraintVertical_bias="1.0">
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragment_layout"
-        android:name="com.example.myapplication.homeFragment"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/BottomNavigationView"
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomnavigation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:menu="@menu/bottomnavmenu" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutframe"
+        android:layout_width="409dp"
+        android:layout_height="629dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayoutBottomNav"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
+        <FrameLayout
+            android:id="@+id/frame_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </FrameLayout>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
