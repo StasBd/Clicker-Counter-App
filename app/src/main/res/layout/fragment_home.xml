@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#131212"
+    tools:context=".HomeFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="152dp">
+
+        <Button
+            android:id="@+id/resetButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="238dp"
+            android:layout_marginBottom="-1dp"
+            android:text="Reset" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <Button
+            android:id="@+id/addButton"
+            android:layout_width="147dp"
+            android:layout_height="78dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="214dp"
+            android:layout_marginBottom="131dp"
+            android:text="+"
+            android:textColor="#FFFFFF"
+            android:textSize="34sp" />
+
+        <Button
+            android:id="@+id/takeButton"
+            android:layout_width="130dp"
+            android:layout_height="80dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="84dp"
+            android:layout_marginBottom="129dp"
+            android:text="-"
+            android:textColor="#FFFFFF"
+            android:textSize="34sp" />
+
+        <TextView
+            android:id="@+id/counterText"
+            android:layout_width="196dp"
+            android:layout_height="147dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="42dp"
+            android:layout_marginBottom="251dp"
+            android:text="0"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/counter"
+            android:layout_width="87dp"
+            android:layout_height="38dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="206dp"
+            android:layout_marginBottom="360dp"
+            android:text="Counter:"
+            android:textColor="#FFFFFF" />
+
+    </RelativeLayout>
+
+</FrameLayout>
